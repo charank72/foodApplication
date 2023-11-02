@@ -1,0 +1,78 @@
+@media screen and (max-width:996px){
+  .navbar .navbar-container input[type="checkbox"],
+  .navbar-container .hanburger-lines{
+    display: block;
+  }
+  .navbar-container{
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+  .navbar .menu-items{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    height: 100vh;
+    max-width: 300px;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    margin-left: -50px;
+    padding-left: -30px;
+    padding-top: 50px;
+    transform: translateX(-100%);
+  }
+  .navbar .navbar-container input[type="checkbox"]{
+    position: absolute;
+    top: 0;right: 0;
+    height: 32px;
+    width: 30px;
+    z-index: 5;
+    opacity: 0;
+  }
+  .navbar-container .hanburger-lines{
+    display: flex;
+    z-index: 2;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 23px;
+    width: 35px;
+  }
+  .hanburger-lines .line{
+    background-color: var(--dark);
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .hanburger-lines .line1{
+    transform-origin: 0% 0%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .hanburger-lines .line2{
+    transition: transform 0.2s ease-in-out;
+  }
+  .hanburger-lines .line3{
+    transform-origin: 0% 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .navbar .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+    transform: translateX(0);
+  }
+  .navbar .navbar-container input[type="checkbox"]:checked ~ .hanburger-lines .line1{
+    transform: rotate(35deg);
+  }
+  .navbar .navbar-container input[type="checkbox"]:checked ~ .hanburger-lines .line2{
+    transform: scaleY(0);
+  }
+  .navbar .navbar-container input[type="checkbox"]:checked ~ .hanburger-lines .line3{
+    transform: rotate(-35deg);
+  }
+  .logo{
+    position: absolute;
+    top: -1.5rem;left: 25px;
+  }
+}
