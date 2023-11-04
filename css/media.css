@@ -75,4 +75,44 @@
     position: absolute;
     top: -1.5rem;left: 25px;
   }
+  /* food */
+
+
+  .food-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .food-menu-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .food-description{
+    text-align: center;
+  }
+  /* tes */
+  .testimonail-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .form-container,.contact-img{
+    width: 100%;
+  }
+}
+@media (min-width: 320px) and (max-width: 526px){
+  .showcase-area .showcase-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.1rem;
+  }
+  .showcase-container .main-title{
+    font-size: 2rem;
+  }
 }
